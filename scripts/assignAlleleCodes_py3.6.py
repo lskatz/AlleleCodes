@@ -48,6 +48,7 @@ outputPath = ''		# path to output file (tsv or csv --> same as input allele prof
 
 # maximum pairwise distance thresholds, weighted to percent shared loci
 thresholds = {'CAMP':[100.0*i/1343 for i in [84, 61, 24, 14, 5, 1]],	# [6.95%, 4.54%, 1.79%, 1.04%, 0.372%, 0.0745%]
+				'HAEM':[100.0*i/1034 for i in [71, 51, 36, 19, 7, 1]],	# [4.06%, 2.92%, 2.06%, 1.09%, 0.400%, 0.0572%]
 				'LMO':[100.0*i/1748 for i in [71, 51, 36, 19, 7, 1]],	# [4.06%, 2.92%, 2.06%, 1.09%, 0.400%, 0.0572%]
 				'SALM':[100.0*i/3002 for i in [80, 28, 15, 7, 4, 1]],	# [2.66%, 0.933%, 0.5%, 0.233%, 0.133%, 0.0333%]
 				'EC':[100.0*i/2513 for i in [77, 51, 16, 6, 1]]}		# [3.06%, 2.03%, 0.637%, 0.239%, 0.0398%]
@@ -2236,7 +2237,7 @@ if __name__ == '__main__':
 								nargs=1, 
 								required=True, 
 								type=str, 
-								choices=['CAMP', 'EC', 'LMO', 'SALM'],
+								choices=['CAMP', 'HAEM', 'EC', 'LMO', 'SALM'],
 								help='organism-specific prefix to be added to front of Allele Code')
 	
 	# optional arguments:
